@@ -3,122 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Day-Night & Year Cycle Simulation</title>
+    <title>Realistic Sky Simulation - Day/Night & Year Cycle</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 h-100">
+        <!-- Sky container - Main simulation area -->
         <div id="sky" class="sky-container">
-            <div id="sun" class="celestial-body sun">
-                <i class="fas fa-sun"></i>
-            </div>
             
-            <div id="moon" class="celestial-body moon">
-                <i class="fas fa-moon"></i>
-            </div>
-            
+            <!-- Stars container - Holds all star elements -->
             <div id="stars-container" class="stars-container"></div>
-
+            
+            <!-- Clouds container - Holds all cloud elements -->
             <div id="clouds-container" class="clouds-container"></div>
             
-            <div class="city-container">
-                <div class="buildings-row">
-                    <div class="building building-1">
-                        <div class="building-windows">
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="building building-2">
-                        <div class="building-windows">
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="building building-3">
-                        <div class="building-windows">
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="building building-4">
-                        <div class="building-windows">
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="building building-5">
-                        <div class="building-windows">
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="building building-6">
-                        <div class="building-windows">
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                            <div class="window"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="street-container">
-                    <div class="street-lamp lamp-1">
-                        <div class="lamp-post"></div>
-                        <div class="lamp-light"></div>
-                    </div>
-                    
-                    <div class="street-lamp lamp-2">
-                        <div class="lamp-post"></div>
-                        <div class="lamp-light"></div>
-                    </div>
-                    
-                    <div class="street-lamp lamp-3">
-                        <div class="lamp-post"></div>
-                        <div class="lamp-light"></div>
-                    </div>
-                    
-                    <div class="street-lamp lamp-4">
-                        <div class="lamp-post"></div>
-                        <div class="lamp-light"></div>
-                    </div>
-                    
-                    <div class="street"></div>
-                    
-                    <div id="cars-container" class="cars-container"></div>
-                    
-                    <div id="people-container" class="people-container"></div>
-                </div>
-            </div>
+            <!-- Sun element - Moves along parabolic path during day -->
+            <div id="sun" class="celestial-body sun"></div>
+            
+            <!-- Moon element - Moves along parabolic path during night -->
+            <div id="moon" class="celestial-body moon"></div>
+            
         </div>
         
+        <!-- Info display - Shows current time, season, and month -->
         <div class="info-display">
             <div class="info-item">
                 <span class="info-label">Time:</span>
@@ -129,19 +39,20 @@
                 <span id="season-display">Spring</span>
             </div>
             <div class="info-item">
-                <span class="info-label">Day:</span>
-                <span id="day-display">1</span>
+                <span class="info-label">Month:</span>
+                <span id="month-display">March</span>
             </div>
         </div>
         
+        <!-- Footer - Developer credit -->
         <footer class="footer">
-            <p class="mb-0">Developed by Mohamed Osman -2025</p>
+            <p class="mb-0">&gt;Developed by Mohamed Osman -2025</p>
         </footer>
     </div>
     
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
-
