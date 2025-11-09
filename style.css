@@ -1,6 +1,3 @@
-/* ============================================
-   Global Styles
-   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +12,6 @@ body {
     background: #000;
 }
 
-/* ============================================
-   Sky Container - Main simulation area
-   ============================================ */
 .sky-container {
     position: relative;
     width: 100%;
@@ -27,9 +21,6 @@ body {
     background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
 }
 
-/* ============================================
-   Celestial Bodies (Sun & Moon)
-   ============================================ */
 .celestial-body {
     position: absolute;
     border-radius: 50%;
@@ -38,7 +29,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Sun element - Golden gradient with glow effect */
 .sun {
     width: 100px;
     height: 100px;
@@ -47,7 +37,6 @@ body {
     opacity: 0;
 }
 
-/* Moon element - Silver gradient with subtle glow */
 .moon {
     width: 80px;
     height: 80px;
@@ -58,7 +47,6 @@ body {
     opacity: 0;
 }
 
-/* Moon craters for realism */
 .moon::before {
     content: '';
     position: absolute;
@@ -74,9 +62,6 @@ body {
         45px 40px 0 -4px rgba(0, 0, 0, 0.12);
 }
 
-/* ============================================
-   Stars Container - Night sky stars
-   ============================================ */
 .stars-container {
     position: absolute;
     width: 100%;
@@ -89,7 +74,6 @@ body {
     pointer-events: none;
 }
 
-/* Individual star element */
 .star {
     position: absolute;
     width: 2px;
@@ -99,21 +83,18 @@ body {
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
 }
 
-/* Larger stars */
 .star.large {
     width: 3px;
     height: 3px;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
 }
 
-/* Medium stars */
 .star.medium {
     width: 2.5px;
     height: 2.5px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.85);
 }
 
-/* Twinkle animation for stars */
 @keyframes twinkle {
     0%, 100% {
         opacity: 0.3;
@@ -125,14 +106,10 @@ body {
     }
 }
 
-/* Apply twinkle animation with random delays and durations */
 .star {
     animation: twinkle 3s infinite;
 }
 
-/* ============================================
-   Clouds Container - Moving clouds
-   ============================================ */
 .clouds-container {
     position: absolute;
     width: 100%;
@@ -145,7 +122,6 @@ body {
     transition: opacity 2s ease-in-out;
 }
 
-/* Cloud base element */
 .cloud {
     position: absolute;
     background: rgba(255, 255, 255, 0.9);
@@ -153,7 +129,6 @@ body {
     filter: blur(1px);
 }
 
-/* Cloud pseudo-elements for puff effect */
 .cloud::before,
 .cloud::after {
     content: '';
@@ -162,7 +137,6 @@ body {
     border-radius: 50px;
 }
 
-/* Small cloud */
 .cloud-small {
     width: 80px;
     height: 30px;
@@ -182,7 +156,6 @@ body {
     right: 15px;
 }
 
-/* Medium cloud */
 .cloud-medium {
     width: 120px;
     height: 45px;
@@ -202,7 +175,6 @@ body {
     right: 20px;
 }
 
-/* Large cloud */
 .cloud-large {
     width: 180px;
     height: 60px;
@@ -222,7 +194,6 @@ body {
     right: 25px;
 }
 
-/* Cloud movement animation */
 @keyframes moveCloud {
     0% {
         transform: translateX(-250px);
@@ -232,9 +203,6 @@ body {
     }
 }
 
-/* ============================================
-   Info Display - Time, Season, Day info
-   ============================================ */
 .info-display {
     position: absolute;
     top: 20px;
@@ -262,9 +230,6 @@ body {
     margin-right: 15px;
 }
 
-/* ============================================
-   Footer - Developer credit
-   ============================================ */
 .footer {
     position: absolute;
     bottom: 0;
@@ -278,9 +243,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* ============================================
-   Seasonal Sky Colors - Spring
-   ============================================ */
 .sky-spring {
     background: linear-gradient(to bottom, #87CEEB 0%, #B8E6B8 50%, #E0F6FF 100%);
 }
@@ -301,9 +263,6 @@ body {
     background: linear-gradient(to bottom, #191970 0%, #000033 50%, #000000 100%);
 }
 
-/* ============================================
-   Seasonal Sky Colors - Summer
-   ============================================ */
 .sky-summer {
     background: linear-gradient(to bottom, #4A90E2 0%, #87CEEB 50%, #FFE4B5 100%);
 }
@@ -324,9 +283,6 @@ body {
     background: linear-gradient(to bottom, #1a1a2e 0%, #0a0a1a 50%, #000000 100%);
 }
 
-/* ============================================
-   Seasonal Sky Colors - Autumn
-   ============================================ */
 .sky-autumn {
     background: linear-gradient(to bottom, #FF8C42 0%, #FFB347 50%, #D2691E 100%);
 }
@@ -347,9 +303,6 @@ body {
     background: linear-gradient(to bottom, #2d1b1b 0%, #1a0f0f 50%, #000000 100%);
 }
 
-/* ============================================
-   Seasonal Sky Colors - Winter
-   ============================================ */
 .sky-winter {
     background: linear-gradient(to bottom, #708090 0%, #B0C4DE 50%, #E6E6FA 100%);
 }
@@ -370,9 +323,6 @@ body {
     background: linear-gradient(to bottom, #1a1a2e 0%, #0f0f1a 50%, #000000 100%);
 }
 
-/* ============================================
-   Responsive Design - Tablets
-   ============================================ */
 @media (max-width: 768px) {
     .sun {
         width: 80px;
@@ -413,9 +363,6 @@ body {
     }
 }
 
-/* ============================================
-   Responsive Design - Mobile
-   ============================================ */
 @media (max-width: 480px) {
     .sun {
         width: 60px;
