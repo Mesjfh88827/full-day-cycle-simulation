@@ -4,44 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Day-Night & Year Cycle Simulation</title>
-    
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container-fluid p-0">
-        <!-- Sky Container - Main container for sky, celestial bodies, and weather effects -->
         <div id="sky" class="sky-container">
-            <!-- Sun - Moves along parabolic path during day -->
             <div id="sun" class="celestial-body sun">
                 <i class="fas fa-sun"></i>
             </div>
             
-            <!-- Moon - Moves along parabolic path during night -->
             <div id="moon" class="celestial-body moon">
                 <i class="fas fa-moon"></i>
             </div>
             
-            <!-- Stars Container - Stars with twinkle effect appear at night -->
             <div id="stars-container" class="stars-container"></div>
-            
-            <!-- Clouds Container - Moving clouds during day -->
+
             <div id="clouds-container" class="clouds-container"></div>
             
-            <!-- City Container - Contains buildings, street, and city elements -->
             <div class="city-container">
-                <!-- Buildings Row - European-style buildings with varying heights -->
                 <div class="buildings-row">
-                    <!-- European Building 1 - Medium height building -->
                     <div class="building building-1">
                         <div class="building-windows">
-                            <!-- Window elements that light up at night -->
                             <div class="window"></div>
                             <div class="window"></div>
                             <div class="window"></div>
@@ -51,7 +36,6 @@
                         </div>
                     </div>
                     
-                    <!-- European Building 2 - Tall building -->
                     <div class="building building-2">
                         <div class="building-windows">
                             <div class="window"></div>
@@ -61,7 +45,6 @@
                         </div>
                     </div>
                     
-                    <!-- European Building 3 - Tallest building -->
                     <div class="building building-3">
                         <div class="building-windows">
                             <div class="window"></div>
@@ -75,7 +58,6 @@
                         </div>
                     </div>
                     
-                    <!-- European Building 4 - Short building -->
                     <div class="building building-4">
                         <div class="building-windows">
                             <div class="window"></div>
@@ -86,7 +68,6 @@
                         </div>
                     </div>
                     
-                    <!-- European Building 5 - Medium height building -->
                     <div class="building building-5">
                         <div class="building-windows">
                             <div class="window"></div>
@@ -98,7 +79,6 @@
                         </div>
                     </div>
                     
-                    <!-- European Building 6 - Tall building -->
                     <div class="building building-6">
                         <div class="building-windows">
                             <div class="window"></div>
@@ -109,9 +89,7 @@
                     </div>
                 </div>
                 
-                <!-- Street Container - Street with lamps, cars, and people -->
                 <div class="street-container">
-                    <!-- Street Lamps - Turn on at night -->
                     <div class="street-lamp lamp-1">
                         <div class="lamp-post"></div>
                         <div class="lamp-light"></div>
@@ -132,19 +110,15 @@
                         <div class="lamp-light"></div>
                     </div>
                     
-                    <!-- Street - Road surface -->
                     <div class="street"></div>
                     
-                    <!-- Cars Container - Moving cars on the street -->
                     <div id="cars-container" class="cars-container"></div>
                     
-                    <!-- People Container - Moving people on the street -->
                     <div id="people-container" class="people-container"></div>
                 </div>
             </div>
         </div>
         
-        <!-- Info Display - Shows current time, season, and day -->
         <div class="info-display">
             <div class="info-item">
                 <span class="info-label">Time:</span>
@@ -160,16 +134,13 @@
             </div>
         </div>
         
-        <!-- Footer - Developer credit -->
         <footer class="footer">
             <p class="mb-0">Developed by Mohamed Osman -2025</p>
         </footer>
     </div>
     
-    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
